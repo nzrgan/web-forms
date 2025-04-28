@@ -1,0 +1,106 @@
+form {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: auto 1fr 49%;
+  box-sizing: border-box;
+  width: 570px;
+  height: 590px;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+
+  h1 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: -0.02em;
+    color: #1c1c1c;
+    grid-column: span 3;
+  }
+
+  >img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 80px;
+    aspect-ratio: 1;
+  }
+
+  .trash {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1.2px solid #545454;
+  }
+
+  label {
+    display: grid;
+    align-content: start;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 147%;
+    letter-spacing: -0.01em;
+    color: #545454;
+    white-space: nowrap;
+  }
+
+
+  label:has([type="file"]) {
+    position: relative;
+
+    &::after {
+      content: url("/icons/camera.svg");
+      position: absolute;
+      top: 2px;
+      right: 4px;
+    }
+  }
+
+  [type="file"]+input {
+    pointer-events: none;
+    border: 1.2px solid #545454;
+    height: 26px;
+    border-radius: 5px;
+  }
+
+  label:has([name="name"], [name="country"], [name="zip"]),
+  button:last-child {
+    grid-column: span 2;
+  }
+}
+
+
+label:has([name="name"], [name="country"], [name="zip"], [name="city"], [name="email"], [name="phone"]) {
+
+  height: 38px;
+}
+
+
+label>input[name="name"],
+[name="country"],
+[name="zip"],
+[name="city"],
+[name="email"],
+[name="phone"] {
+  width: 245px;
+  height: 38px;
+  box-sizing: border-box;
+}
+
+button:last-child {
+  background-color: #007BFF;
+  border: #007BFF;
+  width: 150px;
+  height: 38px;
+  border-radius: 6px;
+  color: white;
+}
+
+button {
+  place-self: start;
+}

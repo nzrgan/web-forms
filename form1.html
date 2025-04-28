@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web-Forms</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style/form1.css">
+</head>
+
+<body>
+  <form action="javascript:">
+    <h1>Create an Account</h1>
+    <label>First Name
+      <input type="text" name="firstname" required>
+    </label>
+
+    <label>Last Name
+      <input type="text" name="lastname" required>
+    </label>
+
+    <label>Email
+      <input type="email" name="email" required>
+    </label>
+
+    <p>We'll never share your email with anyone else.</p>
+
+    <label>
+      <input type="radio" name="gender" value="male">
+      <span>Male</span>
+    </label>
+
+    <label>
+      <input type="radio" name="gender" value="female">
+      <span>Female</span>
+    </label>
+
+    <label>
+      <span>Country</span>
+      <select name="country" required>
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option>
+        <option value="uk">UK</option>
+        <option value="australia">Australia</option>
+        <option value="germany">Germany</option>
+        <option value="france">France</option>
+        <option value="ukraine">Ukraine</option>
+        <option value="other">Other</option>
+      </select>
+    </label>
+
+    <label>City
+      <input type="text" name="city">
+    </label>
+
+    <button>Sign Up</button>
+
+    <p>
+      By clicking the 'Sign Up' button, you confirm that you accept our
+      <a href="">Terms of Use</a> and
+      <a href=""></a>Privacy Policy.
+    </p>
+
+    <hr>
+    <footer>
+      <p>Have an account?</p>
+      <a href="form2.html">Log In</a>
+    </footer>
+  </form>
+</body>
+
+</html>
